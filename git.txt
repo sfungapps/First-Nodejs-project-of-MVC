@@ -1,0 +1,42 @@
+﻿Prepare project to GitHub....
+
+On my terminal:
+*in project folder*
+1) git init
+
+
+2) git add .
+
+
+3) git commit -m "message about project"
+
+
+Upload project to GitHub....
+*after 👆 123 done*
+
+On GitHub:
+4) click New repository
+
+5) click Create repository
+
+6) copy CLI "git remote add origin...."
+
+   and 1-2 lines after 👆
+
+
+On my terminal:
+*in project folder*
+7) paste CLI "git remote add origin...."
+
+
+Update project to GitHub....
+
+On my terminal:
+*in project folder*
+8) git push origin master
+
+
+
+git add . (將改動新增到暫存區)
+git commit -m ”提交說明”
+git push origin master
