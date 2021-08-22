@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include("./partials/head.ejs") %>
+	<body>
+		<%- include("./partials/nav.ejs") %>
+
+		<div class="blogs content">
+			<h2>Champimom Carousel</h2>
+			<% if (ccc.length > 0) { %> <% for(let i=0; i <= ccc.length; i++) { %>
+			<a
+				class="single"
+				target="_blank"
+				href="https://www.champimom.com<%= ccc[0][i] %>"
+			>
+				<img width="50%" src="<%= ccc[1][i] %>" />
+				<span style="font-size: 11px !important"><%- ccc[2][i] %></span>
+			</a>
+			<% } %> <% } else { %>
+			<p>....</p>
+			<% } %>
+		</div>
+
+		<%- include("./partials/footer.ejs") %>
+	</body>
+</html>

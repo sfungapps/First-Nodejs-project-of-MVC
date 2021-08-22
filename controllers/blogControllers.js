@@ -45,7 +45,7 @@ const blog_create_get = (req, res) => {
 
 const blog_create_post = (req, res) => {
 	nedb.insert({ ...req.body, saveTime: Date.now() });
-	res.redirect("/");
+	res.redirect("/blogs");
 };
 
 const blog_delete = (req, res) => {

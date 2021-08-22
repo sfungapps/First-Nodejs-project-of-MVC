@@ -1,8 +1,9 @@
 const express = require("express");
 const blogRoutes = require("./routes/blogRoutes");
-const app = express();
+const fetch = require("node-fetch");
 // for envrionment details in terminal
 const morgan = require("morgan");
+const app = express();
 const port = process.env.PORT || 5000;
 
 // register view engine
@@ -17,11 +18,15 @@ app.use(express.static("public"));
 app.use(morgan("dev"));
 
 app.listen(port, () => {
-	console.log(`Server is running at port ${port}`);
+	console.log(`Server running at port ${port}`);
 });
 
 app.get("/", (req, res) => {
-	res.redirect("/blogs");
+	//res.redirect("/blogs");
+	const url = "https://www.sfungapps.com/welcomeTo/myFunc/champimom.php";
+	fetch(url)
+		.then((p) => p.json())
+		.then((json) => res.render("index", { pageTitle: "About", ccc: json }));
 });
 
 app.get("/about", (req, res) => {

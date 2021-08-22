@@ -5,6 +5,7 @@ body {
 	padding: 0 20px;
 	font-family: "Noto Serif", serif;
 	max-width: 1200px;
+	margin-top: 0;
 }
 p,
 h1,
@@ -26,6 +27,11 @@ nav {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #ddd;
 	text-transform: uppercase;
+
+	position: sticky;
+	top: 0;
+	background: #fff;
+	padding-top: 20px;
 }
 nav ul {
 	display: flex;
